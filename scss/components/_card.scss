@@ -1,0 +1,135 @@
+.card {
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 0;
+    padding: 0;
+    // height: 60vh;
+  }
+
+  &__figure {
+    background-image: linear-gradient(
+        rgba($softVioletColor, 0.4),
+        rgba($softVioletColor, 0.4)
+      ),
+      url(../../images/image-header-mobile.jpg);
+    filter: contrast(190%);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    @include mq(medium) {
+      border-radius: 0 0.5rem 0.5rem 0;
+      height: 100%;
+      order: 1;
+    }
+
+    @include mq(large) {
+      background-image: linear-gradient(
+          rgba($softVioletColor, 0.4),
+          rgba($softVioletColor, 0.4)
+        ),
+        url(../../images/image-header-desktop.jpg);
+    }
+  }
+
+  &__information {
+    background-color: $darkDesaturatedBlueColor;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0 0 0.5rem 0.5rem;
+
+    @include mq(medium) {
+      border-radius: 0.5rem 0 0 0.5rem;
+      padding: 2rem;
+    }
+    @include mq(large) {
+      padding: 3rem 5rem;
+    }
+
+    h3 {
+      color: $whiteColor;
+      font-family: $fontInter;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+
+      @include mq(medium) {
+        text-align: left;
+        font-size: 1.5rem;
+      }
+
+      @include mq(large) {
+        font-size: 2.2rem;
+      }
+
+      span {
+        color: $softVioletColor;
+      }
+    }
+
+    p {
+      line-height: 1.6;
+      color: $slightlyTransparentWhiteColor;
+      font-size: 1.1rem;
+
+      @include mq(medium) {
+        text-align: left;
+        font-size: 1rem;
+      }
+      @include mq(large) {
+        font-size: 1.1rem;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2rem;
+      text-align: center;
+
+      * + * {
+        margin-top: 1.5rem;
+
+        @include mq(medium) {
+          margin-top: 0;
+        }
+      }
+
+      @include mq(medium) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        margin-top: 3rem;
+      }
+      @include mq(large) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        margin-top: 5rem;
+      }
+
+      span {
+        font-size: 1.5rem;
+        color: $whiteColor;
+        font-weight: 700;
+        font-family: $fontInter;
+      }
+
+      small {
+        display: block;
+        text-transform: uppercase;
+        margin-top: 0.3rem;
+        font-size: 0.8rem;
+        color: $slightlyTransparentWhiteTwoColor;
+        font-weight: 400;
+      }
+    }
+  }
+}
