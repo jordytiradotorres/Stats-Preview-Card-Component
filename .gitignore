@@ -18,7 +18,7 @@
 *_REMOTE_*.txt
 
 ### Sass ###
-.sass-cache/
+.sass-cache/*
 *.css.map
 *.sass.map
 *.scss.map
