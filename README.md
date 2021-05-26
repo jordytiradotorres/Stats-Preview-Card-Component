@@ -2,4 +2,4 @@
 
 - Challenge Frontend Mentor
 
-![Vercel](https://stats-preview-card-component-sepia.vercel.app/){widht='500px'}
+![Vercel](path/to/images/image-header-mobile.jpg){widht='500px'}
